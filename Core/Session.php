@@ -34,6 +34,11 @@ class Session
         $_SESSION = [];
     }
 
+    public static function old($key, $value)
+    {
+        $_SESSION['_old'][$key] = $value;
+    }
+
     public static function destroy()
     {
         static::flush();

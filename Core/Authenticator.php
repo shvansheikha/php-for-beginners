@@ -19,12 +19,12 @@ class Authenticator
         return false;
     }
 
-    private function login($user): void
+    public function login($user): void
     {
         $_SESSION['user'] = ['email' => $user['email']];
     }
 
-    private function logout(): void
+    public function logout(): void
     {
         Session::destroy();
     }

@@ -45,3 +45,8 @@ function redirect($path): void
     header("location: $path");
     exit();
 }
+
+function old($key, $default = '')
+{
+    return $_SESSION['_old'][$key] ?? $default;
+}
